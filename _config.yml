@@ -1,0 +1,32 @@
+# Site settings
+title: Bo Zhang's blog
+email: bozhang@nao.cas.cn
+description: Dr. Cham is a bad astronomer.
+baseurl: ""
+url: "http://hypergravity.github.io"
+
+author:
+  name     : 'Bo Zhang'
+  email    : bozhang@nao.cas.cn
+  url      : http://hypergravity.github.io
+  github   : https://github.com/hypergravity
+  facebook : 
+  twitter  : 
+
+github: https://github.com/hypergravity
+disqus_shortname: ""
+google_analytics: 
+
+paginate: 10
+comments: true
+paginate_path: "/page/:num"
+
+sass:
+  style: :compress
+  sass_dir: _sass
+
+# Build settings
+markdown  : kramdown
+permalink : /:title/
+
+gems: [jekyll-paginate]

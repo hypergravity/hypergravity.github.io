@@ -1,40 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Hypergravity.GitHub.io by hypergravity</title>
+---
+layout: default
+title: Home
+slug: home
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<div class="post-list">
+  {% for post in paginator.posts %}
+    {% include post.html %}
+  {% endfor %}
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Hypergravity.GitHub.io</h1>
-        <p>Bo Zhang&#39;s github blog</p>
-        <p class="view"><a href="https://github.com/hypergravity">View the Project on GitHub <small>hypergravity</small></a></p>
-        <ul>
-          <li class="single"><a href="https://github.com/hypergravity/hypergravity.github.io">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="hypergravitygithubio" class="anchor" href="#hypergravitygithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hypergravity.github.io</h1>
-
-<p>Bo Zhang's github blog</p>
-      </section>
-    </div>
-    <footer>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
+  {% include pagination.html %}
+</div>
