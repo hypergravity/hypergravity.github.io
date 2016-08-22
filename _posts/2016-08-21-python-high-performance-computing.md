@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python High Performance Computing"
-date:   Sunday, 21. August 2016 04:51PM 
+date:   Sunday, 21. August 2016 04:51PM
 categories: python, HPC
 ---
 
@@ -18,7 +18,7 @@ This is embarrassing and really out of date (even Raspberry PI equips a multi-co
 
 ## SMP (e.g., multi-core computer)
 
-On a **SMP** (systems with multi-processors), the easiest way is to do multi-threading / multi-processing. Unfortunately, due to the GIL in CPython, it is not possible to get any gain on speed using multi-threading (this is a big issue). Therefore, the multi-processing is preferred. But note that the memory is not shared between processes. 
+On a **SMP** (systems with multi-processors), the easiest way is to do multi-threading / multi-processing. Unfortunately, due to the GIL in CPython, it is impossible to get any gain on speed using multi-threading (this is a big issue, although pypy team is struggling to solve it). Therefore, currently the multi-processing is preferred. But note that the memory is not shared between processes.
 
 Available packages/modules:
 
@@ -41,19 +41,29 @@ Available packages/modules:
 1. mpi4py
 
 ## IPython/MapReduce/Hadoop
-Although it is possible to have ~100-1000 core in the available computer cluster, it could be harder to own/manage an even larger cluster/cloud (I think to most astronomers only <100 cores are available, through workstation or mini-cluster of computers). So MapReduce and Hadoop is not relevant to small-scale scientific problems. But IPython learns somewhat the ideas of MapReduce/Hadoop. It is good with some experience with ipyparallel (formerly named IPython.parallel, but isolated now). 
+Although it is possible to have ~100-1000 core in the available computer cluster, it could be harder to own/manage an even larger cluster/cloud (I think to most astronomers only <100 cores are available, through workstation or mini-cluster of computers). So MapReduce and Hadoop is not relevant to small-scale scientific problems. But IPython learns somewhat the ideas of MapReduce/Hadoop. It is good with some experience with ipyparallel (formerly named IPython.parallel, but isolated now).
 
 The ipyparallel implements a cluster in server-client mode. The way to start is to type `ipcluster start -n 24` in terminal. The point here is that the ipyparallel supports SMP/MPI/ssh/PBS, and also the EC2 cluster.
 
+```python
+from ipyparallel import Client
+rc = Client(profile='default')
+dv = rc[:]
+```
+
 
 ## Other ways to do parallel
-One of the other ways to do parallel is to use **GPU**.
 
+One of the other ways to do parallel is to use **GPU**. Conf **CUDA**.
 
 ## Performance enhancement by integration of compiled languages
-It is inevitable to mention Cython, which is excellent extension of Python to enhance the performance directly. At least without the dynamical type of python objects the code will have 30-70% speed up.
 
-Also, SWIG and F2PY are useful to integrate C/C++ and Fortran into pure Python, respectively.
+It is inevitable to mention **Cython**, which is excellent extension of Python to enhance the performance directly. At least without the dynamical type of python objects the code will have 30-70% speed up.
+
+Also, **SWIG** and **F2PY** are useful to integrate C/C++ and Fortran into pure Python, respectively.
+
+Also, **numba/numbapro** is a very convenient way to speed up your code without much modifications (this is very important in development).
+
 
 ***
 
@@ -76,7 +86,3 @@ References:
 * An Introduction to Parallel Programming, Peter S. Pacheco
 * Using MPI, second ed., W. Gropp et al.
 * Using MPI-2, W. Gropp et al.
-
-
-
-
