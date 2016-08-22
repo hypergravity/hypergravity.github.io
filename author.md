@@ -5,7 +5,7 @@ permalink: /author/
 slug: author
 ---
 
-Bo Zhang, a forth-year PhD student @ National Astronomical Observatories, CAS (NAOC).
+Bo Zhang, a fourth-year PhD student @ National Astronomical Observatories, CAS (NAOC).
 
 ## E-mail
 
