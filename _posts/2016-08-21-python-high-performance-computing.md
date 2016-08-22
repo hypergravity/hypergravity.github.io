@@ -2,7 +2,7 @@
 layout: post
 title:  "Python High Performance Computing"
 date:   Sunday, 21. August 2016 04:51PM 
-categories: python
+categories: python, HPC
 ---
 
 Although Python is not that efficient as C/C++ or Fortran, it is very easy-to-use and easy-to-understand and very easy to develop. Lots of Python packages/modules are available for various purposes, making it easy for you to do almost anything you want.
@@ -10,12 +10,6 @@ Although Python is not that efficient as C/C++ or Fortran, it is very easy-to-us
 In scientific computing field, as one of the two dominant high-level interpreted languages (MATLAB and Python), Python takes advantages of its open source nature and develops very fast. It is possible to build a program using Python with high performance through various ways, i.e., integration of C/C++ code, multi-processing, distributed computing, etc.
 
 # Parallel computing
-
-## Parallel computing
-
-### Parallel computing
-
-#### Parallel computing
 
 ## Single core CPU
 
