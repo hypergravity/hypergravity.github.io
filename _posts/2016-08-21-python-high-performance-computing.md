@@ -33,20 +33,30 @@ It is inevitable to mention Cython, which is excellent extension of Python to en
 Also, SWIG and F2PY are useful to integrate C/C++ and Fortran into Python, respectively.
 
 ### Using LLVM
+
 - **numba/numbapro**
+
 Also, numba/numbapro is a very convenient way to speed up your code without much modifications (this is very important in development).
 
 ***
 
 ## Parallel computing
 
-### Concurrence
+### Asynchronous programming
 
-This is to launch multiple threads simultaneously, and is like pseodo-parallel.
-No performance enhancement.
+This is the third programming model besides serial and parallel programming model.
+It is to launch multiple threads asynchronously / concurrently.
+They may or may not be parallel.
 
-Available modules:
-1. concurrent
+Available modules: (Python 3.x only)
+
+1. concurrent (Python 3.2+)
+ - concurrent.futures
+1. asyncio
+ - asyncio.coroutines
+ - asyncio.futures
+
+
 
 ### Multi-threading
 
@@ -56,7 +66,8 @@ If the program is to solve a CPU-bound problem involving no or only little I/O o
 But for I/O problem, this may be useful to support concurrence.
 
 Available modules:
-1. **threading / _thread**
+
+1. **threading** / **_thread**
 
 To communicate with other threads, use
 
@@ -75,8 +86,28 @@ Although a process is heavier than a thread, for CPU-bound problem the overhead 
 So, feel free to use multi-processing in your program.
 
 Available modules/packages:
+
 1. **multiprocessing**
-1. **joblib**
+ - multiprocessing.Process
+ - multiprocessing.Pool
+
+Communications through:
+
+- multiprocessing.Pipe
+- multiprocessing.Queue
+
+To synchronize processes, use
+
+- multiprocessing.Lock
+- multiprocessing.Event
+- multiprocessing.Condition
+- multiprocessing.Semaphore
+- multiprocessing.RLock
+- multiprocessing.Barrier (Python 3.x)
+
+To manage a state between processes, use
+
+- multiprocessing.Manager
 
 
 ### Distributed computing
@@ -86,20 +117,30 @@ Computer clusters are available for many scientists now. It is possible to get y
 
 Available packages/modules:
 
-1. parallelpython (pp)
-1. Celery
-1. SCOOP
-1. Pyro4
-1. PyCSP
+1. [parallelpython](http://www.parallelpython.com/) (pp)
+1. [SCOOP](https://github.com/soravux/scoop) (usage much like mpiexec, supports hostfile)
+1. Celery (relies on script files ...)
+1. Pyro4 (resambling java Remote Method Invocation)
+1. PyCSP (Python Communicating Sequential Processes)
+1. RPyC (Remote Python Call)
+
+Most of them are implemented in a client-server style (except PyCSP).
+Among them, the first two are suitable for scientific computing.
+
 
 #### MPI
 
 In MPI standard (which is the leading standard for message-passing parallel), there are implementations of Point-to-Point / Collective / One-sided communications. Most of them are safe and easy-to-use. Among the several available framework, MPI is proved to be one of the most efficient ones. So feel free to use it.
 
 Available packages/modules:
+
 1. mpi4py
+ - Point-to-Point communications (send, recv, sendrecv, ...)
+ - Collective communications (bcast, scatter, gather, reduce, ...)
+ - Topologies
 
 References:
+
 - [MPI Forum](https://www.mpi-forum.org/)
 - [openMPI](https://www.open-mpi.org/)
 - [mpi4py](https://pythonhosted.org/mpi4py/)
@@ -108,8 +149,22 @@ References:
 - Using MPI-2, W. Gropp et al.
 
 
-#### IPython/MapReduce
-Although it is possible to have ~100-1000 core in the available computer cluster, it could be harder to own/manage an even larger cluster/cloud (I think to most normal astronomers only ~100 cores are available, through workstation or mini-cluster of computers). So MapReduce, which is designed to process Big Data, is not relevant to small-scale scientific problems. But IPython learns somewhat the ideas of MapReduce. It is good with some experience with ipyparallel (formerly named IPython.parallel, but isolated now).
+#### MapReduce
+![](http://www.glennklockwood.com/data-intensive/hadoop/mapreduce-workflow.png)
+
+MapReduce is a concept introduced by Google.
+It is originally designed to process Big Data, which is so large that could not be stored in a single machine.
+
+Available packages/modules:
+
+1. Disco
+
+For Hadoop, Cloudera provides an easy-to-instal distribution, the Cloudera Distribution of Hadoop (CDH).
+
+
+#### [ipyparallel](http://ipyparallel.readthedocs.io/en/latest/)
+
+Although it is possible to have ~100-1000 core in the available computer cluster, it could be harder to own/manage an even larger cluster/cloud (I think to most normal scientists, particularly astronomers, only ~100 cores are available, through workstation or mini-cluster of computers). So MapReduce, which is designed to process Big Data, is not relevant to small-scale scientific problems, in addition to the difficulties to implement communications between the mappers in MapReduce system. But ipyparallel, the IPython parallel module provides scientists a good tool for research, especially it is an interactive tool. It is good with some experience with ipyparallel (formerly named IPython.parallel, but isolated now).
 
 The ipyparallel implements a cluster in server-client mode. The way to start is to type `ipcluster start -n 24` in terminal. The point here is that the ipyparallel supports SMP/MPI/ssh/PBS, and also the EC2 cluster.
 
@@ -119,11 +174,11 @@ rc = Client(profile='default')
 dv = rc[:]
 ```
 
-Available packages/modules:
-1. Disco
-1. Cloudera CDH
-
-
 ### Other ways to do parallel
 
-One of the other ways to do parallel is to use **GPU**. Conf **CUDA**.
+One of the other ways to do parallel is to use **GPU**.
+
+Available packages:
+
+- PyCUDA
+- PyOpenCL
