@@ -180,5 +180,15 @@ One of the other ways to do parallel is to use **GPU**.
 
 Available packages:
 
+- CUDA
+- OpenCL
+- OpenACC
+
+For python users, available packages are
+
 - PyCUDA
 - PyOpenCL
+
+
+Taking CUDA as an example, installation is described in [here](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf).
+PyCUDA could be installed following [this instruction](https://wiki.tiker.net/PyCuda/Installation/Linux/Ubuntu).
