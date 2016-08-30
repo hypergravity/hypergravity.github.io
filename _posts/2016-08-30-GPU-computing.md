@@ -2,7 +2,7 @@
 layout: post
 title:  "GPU Computing"
 date:   Tuesday, 30. August 2016 11:53AM
-categories: python, HPC
+categories: HPC, Python, MATLAB, GPU
 ---
 
 To obtain the same amount of FLOPS, GPU is a cheaper way.
@@ -37,7 +37,6 @@ In MATLAB, 2014a/2016a all support GPU programming using `gpuArray`.
 The rest seems to be easy and automatic.
 Here is an example:
 
-![](/home/cham/PycharmProjects/hypergravity.github.io/_posts/2016-08-30/matlab2016a_gpuarray_matdot.png)
-
+![](https://github.com/hypergravity/hypergravity.github.io/blob/master/_posts/2016-08-30/matlab2016a_gpuarray_matdot.png)
 Due to the latency, GPU behaves worse than CPU.
 But re-do the commands, GPU has a ~40X speed gain.
