@@ -20,7 +20,8 @@ There are basically two ways to enhance the performance of Python code:
 
 ## Enhance the code efficiency
 
-### Principles of high performance
+### Principles of optimization for high performance
+
 This requires the programmers to have some knowledge of data structure, hardwares and high performance third-party packages.
 For example, vectorization makes full use of the CPU cache, thus leading to a significant enhancement of performance. But this requires the programmers to know the array storage format, e.g., in C/Fortran format.
 Once the programmers knows the advantages of each data structures in Python, the code could be optimized to have a significant improvement on performance.
@@ -37,6 +38,29 @@ Also, SWIG and F2PY are useful to integrate C/C++ and Fortran into Python, respe
 - **numba/numbapro**
 
 Also, numba/numbapro is a very convenient way to speed up your code without much modifications (this is very important in development).
+Using the @numba.jit decorator, even numpy code, whose most CPU-intensive code is written using C/Fortran, can accelerate.
+Taking the matrix dot as an example,
+```python
+import numpy as np
+import numba
+
+@numba.jit
+def mydot(a, b):
+    return np.dot(a, b)
+
+a = np.random.randn(10000, 1000)
+b = np.random.randn(1000, 10000)
+
+%timeit np.dot(a, b)
+%timeit mydot(a, b)
+```
+
+The output is:
+```
+1 loop, best of 3: 1.03 s per loop
+1 loop, best of 3: 870 ms per loop
+```
+This is at least 10% speed up, and could be significant to the problem.
 
 ***
 
@@ -177,18 +201,4 @@ dv = rc[:]
 ### Other ways to do parallel
 
 One of the other ways to do parallel is to use **GPU**.
-
-Available packages:
-
-- CUDA
-- OpenCL
-- OpenACC
-
-For python users, available packages are
-
-- PyCUDA
-- PyOpenCL
-
-
-Taking CUDA as an example, installation is described in [here](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf).
-PyCUDA could be installed following [this instruction](https://wiki.tiker.net/PyCuda/Installation/Linux/Ubuntu).
+This is migrated to another post.
