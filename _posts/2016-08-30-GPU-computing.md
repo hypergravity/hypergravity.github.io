@@ -37,6 +37,6 @@ In MATLAB, 2014a/2016a all support GPU programming using `gpuArray`.
 The rest seems to be easy and automatic.
 Here is an example:
 
-![](https://github.com/hypergravity/hypergravity.github.io/blob/master/_posts/2016-08-30/matlab2016a_gpuarray_matdot.png)
+![](https://raw.githubusercontent.com/hypergravity/hypergravity.github.io/master/_posts/2016-08-30/matlab2016a_gpuarray_matdot.png)
 Due to the latency, GPU behaves worse than CPU.
 But re-do the commands, GPU has a ~40X speed gain.
