@@ -35,10 +35,10 @@ Also, SWIG and F2PY are useful to integrate C/C++ and Fortran into Python, respe
 
 ### Using LLVM
 
-- **numba/numbapro**
+- **`numba`/`numbapro`**
 
-Also, numba/numbapro is a very convenient way to speed up your code without much modifications (this is very important in development).
-Using the @numba.jit decorator, even numpy code, whose most CPU-intensive code is written using C/Fortran, can accelerate.
+Also, `numba`/`numbapro` is a very convenient way to speed up your code without much modifications (this is very important in development).
+Using the `@numba.jit` decorator, even `numpy` code, whose most CPU-intensive code is written using C/Fortran, can accelerate.
 Taking the matrix dot as an example,
 
 ```python
@@ -58,10 +58,10 @@ b = np.random.randn(1000, 10000)
 
 The output is:
 
-```
-1 loop, best of 3: 1.03 s per loop
-1 loop, best of 3: 870 ms per loop
-```
+
+    1 loop, best of 3: 1.03 s per loop
+    1 loop, best of 3: 870 ms per loop
+
 
 This is at least 10% speed up, and could be significant to the problem.
 
