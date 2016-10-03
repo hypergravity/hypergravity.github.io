@@ -202,4 +202,4 @@ dv = rc[:]
 ### Other ways to do parallel
 
 One of the other ways to do parallel is to use **GPU**.
-This is migrated to another post.
+This is migrated to [here](https://hypergravity.github.io/GPU-computing/).
