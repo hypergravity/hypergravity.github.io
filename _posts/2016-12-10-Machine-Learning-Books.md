@@ -9,7 +9,7 @@ Just to list a few references for Machine Learning here.
 
 ## Introduction level
 
-- [] \[Mitchell 1997] Machine Learning
+- [ ] \[Mitchell 1997] Machine Learning
 - [Duda et al. 2001]: Pattern Classification
 - [Flach 2012]: Machine Learning: The Art and Science of Algorithms that Make Sence of Data
 - [Witten et al. 2011]: Data Mining: Practical Machine Learning Tools and Techniques
