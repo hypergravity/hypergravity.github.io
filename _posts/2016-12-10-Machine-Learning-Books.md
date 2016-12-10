@@ -7,9 +7,14 @@ categories: Machine Learning
 
 Just to list a few references for Machine Learning here.
 
+Most of them have free PDFs that can be downloaded (marked).
+If the marks are not displayed correctly, click [here](https://github.com/hypergravity/hypergravity.github.io/blob/master/_posts/2016-12-10-Machine-Learning-Books.md)
+to see the right version
+
+
 ## Introduction level
 
-- [ ] \[Mitchell 1997] Machine Learning
+- [ ] \[Mitchell 1997]: Machine Learning
 - [x] \[Duda et al. 2001]: Pattern Classification
 - [x] \[Flach 2012]: Machine Learning: The Art and Science of Algorithms that Make Sence of Data
 - [ ] \[Witten et al. 2011]: Data Mining: Practical Machine Learning Tools and Techniques
@@ -34,3 +39,4 @@ Just to list a few references for Machine Learning here.
 - [x] \[Wall & Jenkins]: Practical Statistics for Astronomers
 - [x] \[Ivezic et al. 2014]: Statistics, Data Mining, and Machine Learning in Astronomy: A Practical Python Guide for the Analysis of Survey Data
 - [x] \[Feigelson & Babu 2012]: Modern Statistical Methods for Astronomy: With R Applications
+- [x] \[Way et al. 2012]: Advances in machine learning and data mining for astronomy
