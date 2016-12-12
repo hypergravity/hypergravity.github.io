@@ -31,7 +31,7 @@ to see the right version
 - [x] \[Hastie et al. 2009]: [The Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/) (ESL)
 - [x] \[Bishop 2006]: Pattern Recognition and Machine Learning (PRML)
 - [x] \[Murphy 2012]: Machine Learning: A Probabilistic Perspective (MLAPP)
-- [x] \[German et al. 2013]: Bayesian Data Analysis (3rd Edition)
+- [x] \[Gelman et al. 2013]: [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) (3rd Edition, BDA3)
 
 ## Astronomically related
 - [x] \[Wall & Jenkins 2012]: Practical Statistics for Astronomers (2nd Edition)
