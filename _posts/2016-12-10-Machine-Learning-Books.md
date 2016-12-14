@@ -31,10 +31,16 @@ to see the right version
 - [x] \[Hastie et al. 2009]: [The Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/) (ESL)
 - [x] \[Bishop 2006]: Pattern Recognition and Machine Learning (PRML)
 - [x] \[Murphy 2012]: Machine Learning: A Probabilistic Perspective (MLAPP)
-- [x] \[Gelman et al. 2013]: [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) (3rd Edition, BDA3)
 
 ## Astronomically related
 - [x] \[Wall & Jenkins 2012]: Practical Statistics for Astronomers (2nd Edition)
 - [x] \[Ivezic et al. 2014]: Statistics, Data Mining, and Machine Learning in Astronomy: A Practical Python Guide for the Analysis of Survey Data
 - [x] \[Feigelson & Babu 2012]: Modern Statistical Methods for Astronomy: With R Applications
 - [x] \[Way et al. 2012]: Advances in machine learning and data mining for astronomy
+
+## Bayesian Statistics
+- [x] \[Gelman et al. 2013]: [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) (3rd Edition, BDA3)
+- [x] \[Cam Davidson-Pilon]: [Probabilistic Programming & Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+- [ ] \[James O. Berger]: Statistical Decision Theory and Bayesian Analysis
+- [x] \[Robert & Casella 2004]: Monte Carlo Statistical Methods
+- [x] \[Marin & Robert 2007]: Bayesian Core: A Practical Approach to Computational Bayesian Statistics
