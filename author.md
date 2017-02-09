@@ -16,3 +16,6 @@ Bo Zhang, a fourth-year PhD student @ National Astronomical Observatories, CAS (
 - High performance programming using MATLAB, python.
 - Machine learning applications
 - Astronomical statistics
+
+## CV
+CV can be found [here](https://github.com/hypergravity/hypergravity.github.io/tree/master/cv/cham_cv.pdf).
