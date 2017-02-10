@@ -10,6 +10,7 @@ Bo Zhang, a fourth-year PhD student @ National Astronomical Observatories, CAS (
 ## E-mail
 
 <mailto:bozhang@nao.cas.cn>
+<mailto:bozhang.astro@gmail.com>
 
 ## Areas of Interest
 
@@ -18,4 +19,4 @@ Bo Zhang, a fourth-year PhD student @ National Astronomical Observatories, CAS (
 - Astronomical statistics
 
 ## CV
-CV can be found [here](https://github.com/hypergravity/hypergravity.github.io/raw/master/cv/cham_cv.pdf).
+CV can be found [here](https://github.com/hypergravity/hypergravity.github.io/blob/master/cv/cham_cv.pdf).
