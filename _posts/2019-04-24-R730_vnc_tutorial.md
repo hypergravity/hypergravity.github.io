@@ -27,10 +27,19 @@ Remember to change the port number, valid values are 1-100 (for internal visit),
 
 
 ### my `~/.vnc/xstartup` file:
+
+for Xfce desktop:
 ```
 #!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
-#startkde &
 startxfce4 &
+```
+
+for KDE desktop:
+```
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+dbus-launch startxfce4 &
 ```
