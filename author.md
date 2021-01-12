@@ -5,18 +5,18 @@ permalink: /author/
 slug: author
 ---
 
-Bo Zhang, a fourth-year PhD student @ National Astronomical Observatories, CAS (NAOC).
+## Bo Zhang
 
-## E-mail
+You can find my self-introduction in [https://github.com/hypergravity](https://github.com/hypergravity).
 
-<mailto:bozhang@nao.cas.cn>
-<mailto:bozhang.astro@gmail.com>
+## Email
+
+- <mailto:bozhang@bnu.edu.cn>
+- <mailto:bozhang@nao.cas.cn>
+- <mailto:bozhang.astro@gmail.com>
 
 ## Areas of Interest
 
 - High performance programming using MATLAB, python.
 - Machine learning applications
 - Astronomical statistics
-
-## CV
-CV can be found [here](https://github.com/hypergravity/hypergravity.github.io/blob/master/cv/cham_cv.pdf).
